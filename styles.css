@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@700&display=swap');
+
+/* setting colors */
+
+:root {
+    --primary: #0d6efd;
+    --dark: #21252f;
+    --body: #888;
+    --box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1)
+}
+
+/* setting basics */
+
+body {
+    font-family: Sora, sans-serif;
+    line-height: 1.7;
+    color: var(--body)
+}
+
+a {
+    text-align: none;
+    color: var(--dark)
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.dislpay-4 {
+    color: var(--dark);
+    font-weight: 700;
+}
+
+img{
+    width:100%;
+}
+
+.btn {
+    padding: 14px 18px;
+    border-width: 2px;
+    border-radius: 0;
+}
+
+section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+
+
+
+
+/* setting navbar */
+
+.navbar {
+    box-shadow: var(--box-shadow)
+}
+
+.navbar .logo {
+    width: 160px;
+}
+
+.navbar .nav-link {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+
+.hero {
+    background-image: url(images/cover.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 2;
+
+}
+
+.hero::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(21, 20, 51, 0.8);
+    z-index: -1
+}
+
+/* setting services */
+
+.card-effect {
+    box-shadow: var(--box-shadow);
+    background-color: #fff;
+    padding: 25px;
+    transition: all 0.35s ease;
+}
+
+.card-effect:hover {
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+.iconbox {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    color: #fff;
+    font-size: 32px;
+    border-radius: 100px;
+    flex: none;
+}
+
+
+.service {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.service::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background-color: var(--primary);
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.service:hover h5,
+.service:hover p {
+    color: #fff
+}
+
+.service:hover .iconbox {
+    background-color: #fff;
+    color: var(--primary)
+}
+
+.service:hover::after {
+    opacity: 1;
+    top: 0
+}
+
+/* setting features */
+
+.col-img {
+    background-image: url(images/cover2.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 500px;
+
+}
+
+/* setting portfolio */
+
+.project{
+    position:relative;
+    overflow: hidden;
+}
+
+.project .overlay{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(21,20,51,0.8);
+    padding:30px;
+    display: flex;
+    align-items: flex-end;
+    transition:all 0.4 ease;
+    opacity: 0;
+}
+
+.project img{
+    transition:all 0.4 ease;
+}
+
+.project:hover .overlay{
+    opacity:1;
+}
+
+.project:hover img{
+    transform:scale(1.1)
+}
+
+/* setting pricing */
+
+.pricing i{
+    font-size: 20px;
+    color:var(--primary)
+    
+  }
+
+  .pricing ul li{
+    
+    margin-top: 8px;
+    
+  }
+
+  /* setting team */
+
+  .team-member img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+  }
+
+  .social-icons{
+    display: flex;
+    justify-content: center;
+  }
+
+  .social-icons a{
+    width: 34px;
+    height: 34px;
+    background-color: var(--primary);
+    border: 2px solid #fff;
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    margin-left:5px;
+    transition: all 0.4 ease;
+
+  }
+
+  .social-icons a:hover{
+    color: var(--primary);
+    background-color: transparent;
+    border-color:var(--primary);
+  }
+
+   /* setting contact*/
+
+   form input.form-control{
+    height:56px;
+  }
+
+  /* setting footer */
+
+  .footer-top{
+    padding-bottom: 90px;
+    padding:90px;
+    background-color: #000;
+  }
+
+  .footer-top a{
+    color:var(--body)
+  }
+
+  .footer-top a:hover{
+    color:#fff
+  }
+
+  .footer-bottom{
+    background-color: #000;
+
+  }
+
